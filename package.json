@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-cookiehub",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gatsby.js plugin to add the cookiehub widget for GDPR compliance in europe.",
   "main": "index.js",
   "scripts": {

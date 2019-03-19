@@ -1,5 +1,5 @@
-import React from 'react';
-import { oneLine, stripIndent } from 'common-tags';
+import React from "react";
+import { oneLine, stripIndent } from "common-tags";
 
 const COOKIHUB_SRC = `https://cookiehub.net/cc/`;
 const GTAG_SRC = `https://www.googletagmanager.com/gtag/js`;
@@ -9,7 +9,7 @@ exports.onRenderBody = (
   pluginOptions
 ) => {
   if (
-    process.env.NODE_ENV !== 'production' ||
+    process.env.NODE_ENV !== "production" ||
     !pluginOptions.cookihubId ||
     !pluginOptions.gtagId
   ) {
@@ -67,13 +67,13 @@ exports.onRenderBody = (
         onInitialise: function(status) {
           if (this.hasConsented('analytics')) {
             window.GATSBY_PLUGIN_COOKIEHUB_DISABLED_ANALYTICS = false;
-            gtag('config', ${pluginOptions.trackingId});            
+            gtag('config', '${pluginOptions.trackingId}');            
           }
         },
         onAllow: function(category) {
           if (category == 'analytics') {
             window.GATSBY_PLUGIN_COOKIEHUB_DISABLED_ANALYTICS = false;
-            gtag('config', ${pluginOptions.trackingId});
+            gtag('config', '${pluginOptions.trackingId}');
           }
         },
         onRevoke: function(category) {
