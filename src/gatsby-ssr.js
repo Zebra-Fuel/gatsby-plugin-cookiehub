@@ -41,7 +41,7 @@ exports.onRenderBody = (
     );
     window.GATSBY_PLUGIN_COOKIEHUB_ANONYMIZE = ${anonymize};
 
-    let options = undefined;
+    var options = undefined;
 
     if (${anonymize}) {
       options = {
